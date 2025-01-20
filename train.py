@@ -32,7 +32,6 @@ train_images, val_images, train_texts, val_texts, train_labels, val_labels = tra
 # 初始化 BERT tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
-# 自定义数据集类
 class MultimodalDataset(Dataset):
     def __init__(self, images, texts, labels, tokenizer, max_length=128):
         self.images = images
@@ -64,7 +63,7 @@ class MultimodalDataset(Dataset):
             'image': image,
             'input_ids': encoding['input_ids'].flatten(),
             'attention_mask': encoding['attention_mask'].flatten(),
-            'label': torch.tensor(label, dtype=torch.long)  # 标签已经是整数，直接转换为张量
+            'label': torch.tensor(label, dtype=torch.long)  
         }
 
 # 创建数据集和数据加载器
