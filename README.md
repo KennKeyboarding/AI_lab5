@@ -20,6 +20,12 @@ pip install -r requirements.txt
 
 
 ## 运行代码
+进入文件根目录并运行。
+
+需要提前下载预训练模型 ResNet50 ，保存在根目录下。
+
+访问以下链接：
+https://download.pytorch.org/models/resnet50-0676ba61.pth
 
 ```
 
